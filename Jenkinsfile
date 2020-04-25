@@ -16,11 +16,11 @@ pipeline {
             steps {
                 sh "npm run test:ci"
             }
-            post {
-                always {
-                    junit testDataPublishers:[[$class: 'AttachmentPublisher']], testResults: "tests_output/**/*.xml"
-                }
-            }
+            // post {
+            //     always {
+            //         junit testDataPublishers:[[$class: 'AttachmentPublisher']], testResults: "tests_output/**/*.xml"
+            //     }
+            // }
         }
     }
 }
