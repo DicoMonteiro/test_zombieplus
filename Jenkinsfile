@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker { 
-            image "papitoio/nodewd"
+            image "adrianobma/node-wd"
             args "--network=skynet"
         }
     }
